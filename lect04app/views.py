@@ -20,7 +20,7 @@ def user_form(request):
             logger.info(f'Получили {name=}, {email=}, {age=}.')
     else:
         form = UserForm()
-    return render(request, 'lect04app/add_product_form.html', {'form': form})
+    return render(request, 'lect04app/user_form.html', {'form': form})
 
 
 def many_fields_form(request):
@@ -49,7 +49,7 @@ def add_user(request):
     else:
         form = UserForm()
         message = 'Заполните форму'
-    return render(request, 'lect04app/add_product_form.html', {'form': form, 'message': message})
+    return render(request, 'lect04app/user_form.html', {'form': form, 'message': message})
 
 
 def upload_image(request):
